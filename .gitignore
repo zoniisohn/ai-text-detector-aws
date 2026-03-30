@@ -1,0 +1,5 @@
+venv/
+backend/model_files/
+__pycache__/
+*.pyc
+.env
