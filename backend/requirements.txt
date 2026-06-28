@@ -5,3 +5,4 @@ transformers
 fastapi
 uvicorn
 python-multipart
+redis
