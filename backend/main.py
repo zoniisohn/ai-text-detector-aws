@@ -6,6 +6,8 @@ import torch
 import redis
 import json
 import hashlib
+import os
+import redis
 
 app = FastAPI()
 
@@ -18,8 +20,9 @@ app.add_middleware(
 
 # Redis 연결 (EC2 #1 프라이빗 IP)
 redis_client = redis.Redis(
-    host="172.31.47.216",  # EC2 #1 프라이빗 IP
+    host="172.31.47.216",
     port=6379,
+    password=os.environ.get("REDIS_PASSWORD"),   # 하드코딩 대신 환경변수로 주입
     decode_responses=True
 )
 

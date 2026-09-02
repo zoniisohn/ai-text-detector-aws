@@ -3,3 +3,5 @@ backend/model_files/
 __pycache__/
 *.pyc
 .env
+ai-detector-key.pem
+desktop.ini
